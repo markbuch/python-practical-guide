@@ -12,10 +12,7 @@ def add_value(transaction_amount, last_transaction = [1]):
         :transaction_amount: The amount should be added.
         :last_transaction: The last blockchain transaction (default [1]).
     
-    
     """
-    
-    
     blockchain.append([last_transaction,transaction_amount])
     
 def get_user_input():
