@@ -15,17 +15,19 @@ def add_transaction(recipient, sender = owner,  amount=1.0):
     Arguments:
         :sender: The sender of the coins
         :recipient: The recipient of the coins
-        :amount: The amount of coinsa sent with the transaction (default = 12.0)
+        :amount: The amount of coins sent with the transaction (default = 12.0)
     """
-    transaction = {'sender':sender, 
-    'recipient': recipient, 
-    'amount': amount}
+    transaction = {
+        'sender':sender, 
+        'recipient': recipient, 
+        'amount': amount
+        }
     
     open_transactions.append(transaction)
     
 
 def mine_block():
-    pass
+    pass # allows to define functions, and don't do anything when function is called
 
 def get_transaction_value():
     """ Returns the input of a user (a new transaction amount) 
@@ -35,6 +37,7 @@ def get_transaction_value():
     return (tx_recipient, tx_amount) # tuple
 
 def get_user_choice():
+    """ Prompts the user for their choice and returns it."""
     user_input = input('Your choice: ')
     return user_input
 
