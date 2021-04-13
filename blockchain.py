@@ -1,4 +1,9 @@
 # Initializing our blockchain list
+genesis_block = {
+        'previous_hash':'',
+        'index': 0,
+        'tranactions': []
+        }
 blockchain = []
 open_transactions = []
 owner = 'Oscar'
@@ -25,7 +30,14 @@ def add_transaction(recipient, sender = owner,  amount=1.0):
     
 
 def mine_block():
-    pass
+    last_block = blockchain[-1]
+    block = {
+        'previous_hash':'xyz',
+        'index': len(blockchain),
+        'tranactions':open_transactions
+        }
+        blockchain.append(block)
+
 
 def get_transaction_value():
     """ Returns the input of a user (a new transaction amount) 
