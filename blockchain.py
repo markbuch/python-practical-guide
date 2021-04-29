@@ -160,7 +160,7 @@ while waiting_for_input:
         print_blockchain_elements()
         print('Invalid blockchain!')
         break
-    print(get_balance('Oscar'))
+    print('Balance of {}: {:6.2f}'.format('Max', get_balance('Oscar')))
     #get_balance('Oscar')
 else: print('User left!')
 
